@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+body {
+    background-color: rgb(250, 250, 250);
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+}
+
+
+.pause-on-hover:hover .motion-track {
+  animation-play-state: paused !important;
+}
+
+@layer components {
+    .heading-main {
+        @apply font-sans h-auto tracking-[-1px] font-extrabold text-3xl md:text-5xl text-[#9C9C9C];
+        font-family: "Helvetica Now Display Bold", "Helvetica Now Display Bold Placeholder", sans-serif;
+    }
+
+    .app-viewport {
+        @apply w-full h-screen p-[10px] overflow-hidden justify-between flex flex-col;
+    }
+
+    .slider{
+        @apply w-full h-full mt-[1rem] max-h-[calc(100vh-200px)] overflow-hidden ;
+    }
+
+    .logo-wrapper {
+        @apply w-12 h-12 object-contain pointer-events-none;
+    }
+
+    .text{
+        @apply font-sans text-gray-500 font-semibold text-xs;
+        font-family: "Helvetica Now Display Bold", "Helvetica Now Display Bold Placeholder", sans-serif;
+    }
+
+    .hero-item{
+        @apply w-full flex-shrink-0 md:w-1/2 lg:w-1/3;
+    }
+}
